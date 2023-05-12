@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the Number Game!</title>
+</head>
+<body >
+    <h1 class="title" >Guess the Number Game!</h1>
+
+    <div class="Rule">
+        <h3 style="padding-top: 0px;"><span class="rt" >Rule:</span><br> The system generates a number between <span class="cred" >1</span> to <span class="cred" >10</span>.
+             Guess the number and submit. The player will be guided by <span class="cred" >HIGHER</span> or <span class="cred" >LOWER</span> message to help in guessing.
+             Try to guess within <span class="cred" >10 tries</span>. ENJOY!!</h4>
+    </div>
+
+    <div class="tap"> 
+        <h3 class="TG">Tap to Generate</h3>
+        <button class="gn" onclick="generateNumber()">Generate Number</button>
+        <h2 style="margin-left: 30px;display:none;color: whitesmoke;" id="msg1">Number Generated...</h2>
+    </div>
+
+    <div class="sub">
+        <label class="labg" id="gu" for="guess">Your Guess:</label>
+        <input class="input" type="number" id="guess" name="quantity" min="1" max="10">
+        <button class="subut" onclick="store();checkNumber();" type="submit" value="Submit">submit</button>
+        <h2 id="comp" style="display: none;color: rgb(241, 93, 13);margin-left: 40px;"></h2>
+        <h2 style="display: none;color: greenyellow;margin-left: 40px;" id="cong"></h2>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
